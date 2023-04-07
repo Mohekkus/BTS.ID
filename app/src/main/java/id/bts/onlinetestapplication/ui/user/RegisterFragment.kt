@@ -32,9 +32,7 @@ class RegisterFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.user.observe(viewLifecycleOwner) {
-            it.let {data ->
-                toastUser(data.message)
-            }
+
         }
         binding.apply {
             button2.setOnClickListener {
